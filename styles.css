@@ -1,0 +1,246 @@
+:root {
+    --color-rosa-bebe: #ffc0cb;
+    --color-lavanda-clara: #f3e5f5;
+    --color-vermelho: #b22222;
+    --color-vermelho-escuro: #8b1a1a;
+    --color-rosa-escuro: #e75480;
+}
+
+
+/* Corpo */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-lavanda-clara);
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Cabeçalho */
+
+header {
+    background-color: var(--color-rosa-bebe);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 img {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.elegance {
+    color: #333;
+}
+
+.descubra {
+    color: #333;
+}
+
+
+/* Navegação */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Verdana', sans-serif;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--color-rosa-bebe);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Seções e Texto */
+
+header,
+nav ul,
+section,
+footer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1,
+h2 {
+    font-family: 'Georgia', serif;
+}
+
+p,
+ul {
+    font-family: 'Verdana', sans-serif;
+}
+
+
+/* Botão */
+
+.btn {
+    background-color: var(--color-rosa-bebe);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Verdana', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Seção Hero */
+
+section#hero {
+    background-image: url('img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Itens da Coleção */
+
+.collection-item {
+    display: block;
+    cursor: pointer;
+    color: var(--color-vermelho);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.collection-item,
+.btn {
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.collection-item:hover,
+.btn:hover {
+    transform: scale(1.05);
+    background-color: var(--color-rosa-escuro);
+    color: #fff;
+}
+
+.collection-details {
+    display: none;
+    padding: 10px 0;
+    border-top: 1px solid var(--color-rosa-bebe);
+    margin-bottom: 10px;
+}
+
+
+/* Ícones Sociais */
+
+.social-icon {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-icon:hover {
+    color: var(--color-rosa-escuro);
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid var(--color-vermelho);
+    outline: none;
+}
+
+
+/* Responsividade */
+
+
+/* Telas pequenas (smartphones) */
+
+@media (max-width: 600px) {
+    header,
+    nav ul,
+    section,
+    footer {
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    header h1 img {
+        height: 40px;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+    section#hero {
+        padding: 80px 20px;
+    }
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    header h1 {
+        flex-direction: column;
+    }
+    header h1 img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Telas médias (tablets) */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    nav ul {
+        gap: 15px;
+    }
+    header h1 img {
+        height: 45px;
+    }
+    .btn {
+        padding: 9px 18px;
+    }
+    section#hero {
+        padding: 90px 20px;
+    }
+}
